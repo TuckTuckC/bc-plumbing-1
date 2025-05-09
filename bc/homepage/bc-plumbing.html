@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../../htmx-source/htmx.min.js"></script>
+        <title>BC Plumbing</title>
+    </head>
+    <body>
+        <header>
+            <h1>BC Plumbing</h1>
+            <nav>
+                <ul>
+                    <button 
+                hx-get="about.html" 
+                hx-target="#main-content" 
+                hx-swap="innerHTML">
+                        About Us
+                    </button>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section>
+                <h2>New Construction, Commercial, and Residential Plumbing Services</h2>
+                <p>35 Years of Experience and Family Owned Business</p>
+            </section>
+
+            <section>
+                <h2>Our Services</h2>
+                <article>
+                    <h3>New Construction</h3>
+                    <p>We handle rough-ins and trim outs for all types of builds.</p>
+                </article>
+                <article>
+                    <h3>Repairs</h3>
+                    <p>Leak detection, pipe replacement, fixture repair, and more.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Customer Testimonials</h2>
+                <article>
+                    <blockquote>
+                        <p>BC Plumbing fixed our busted pipe in under an hour—super fast!</p>
+                        <footer>— Happy Homeowner</footer>
+                    </blockquote>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
