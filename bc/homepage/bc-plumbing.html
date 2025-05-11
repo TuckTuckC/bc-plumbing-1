@@ -1,53 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <script src="../../htmx-source/htmx.min.js"></script>
-        <title>BC Plumbing</title>
-    </head>
-    <body>
-        <header>
-            <h1>BC Plumbing</h1>
-            <nav>
-                <ul>
+        <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+        <meta charset="UTF-8" />
+    <title>BC Plumbing</title>
+</head>
+<body>
+    <header>
+        <h1>BC Plumbing</h1>
+        <nav>
+            <ul>
+                <!-- Better placed as list items -->
+                <li>
                     <button 
-                hx-get="about.html" 
-                hx-target="#main-content" 
-                hx-swap="innerHTML">
-                        About Us
-                    </button>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="main-content">
-            <section>
-                <h2>New Construction, Commercial, and Residential Plumbing Services</h2>
-                <p>35 Years of Experience and Family Owned Business</p>
-            </section>
+                      hx-get="../about/about.html" 
+                      hx-target="#main-content" 
+                      hx-push-url="true"
+                      hx-swap="innerHTML">
+                      About Us (Live)
+                </button>
+                  </li>                  
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <section>
-                <h2>Our Services</h2>
-                <article>
-                    <h3>New Construction</h3>
-                    <p>We handle rough-ins and trim outs for all types of builds.</p>
-                </article>
-                <article>
-                    <h3>Repairs</h3>
-                    <p>Leak detection, pipe replacement, fixture repair, and more.</p>
-                </article>
-            </section>
+    <main id="main-content">
 
-            <section>
-                <h2>Customer Testimonials</h2>
-                <article>
-                    <blockquote>
-                        <p>BC Plumbing fixed our busted pipe in under an hour—super fast!</p>
-                        <footer>— Happy Homeowner</footer>
-                    </blockquote>
-                </article>
-            </section>
-        </main>
-    </body>
+        <!-- Hero Section -->
+        <section>
+            <h2>Trusted Plumbing for Homes & Businesses</h2>
+            <p>With over 35 years of experience, BC Plumbing is a family-owned business proudly serving Haywood County with reliable, top-quality plumbing and gas services.</p>
+        </section>
+
+        <!-- Services Overview -->
+        <section>
+            <h2>What We Do</h2>
+
+            <article>
+                <h3>New Construction</h3>
+                <p>From rough-ins to trim outs, we support builders with complete plumbing installations that meet code and exceed expectations.</p>
+            </article>
+
+            <article>
+                <h3>Repairs</h3>
+                <p>We handle everything from minor leaks to major pipe failures—fast, affordable, and guaranteed.</p>
+            </article>
+
+            <article>
+                <h3>Commercial Plumbing</h3>
+                <p>Whether you run a restaurant, office, or facility, our commercial services cover installation, maintenance, and emergency repairs—minimizing downtime and maximizing reliability.</p>
+            </article>
+
+            <article>
+                <h3>Residential Plumbing</h3>
+                <p>We keep your home’s water and gas systems running smoothly, offering expert installations, diagnostics, and repairs with care and precision.</p>
+            </article>
+        </section>
+
+        <!-- Full Services List -->
+        <section>
+            <h2>Complete Plumbing Solutions</h2>
+            <p>Our team is equipped to handle any plumbing or gas project—big or small. Here’s what we specialize in:</p>
+            <ul>
+                <li>New Construction Plumbing</li>
+                <li>Commercial & Residential Service</li>
+                <li>Emergency Repairs</li>
+                <li>Gas Line Installation & Maintenance</li>
+                <li>Water Heater Service (All Types)</li>
+                <li>Drain & Sewer Line Cleaning</li>
+                <li>Sewer Installation & Repair</li>
+            </ul>
+        </section>
+
+        <!-- Showcase Section -->
+        <section>
+            <h2>See Our Work</h2>
+            <article>
+                <p><strong>ValleyWood</strong> — Full system install for a residential development.</p>
+                <p><strong>Patton Cove</strong> — Commercial plumbing from ground-up construction.</p>
+            </article>
+        </section>
+
+        <!-- Testimonials -->
+        <section>
+            <h2>What Our Customers Say</h2>
+            <article>
+                <blockquote>
+                    <p>"BC Plumbing fixed our busted pipe in under an hour—super fast!"</p>
+                    <footer>— Happy Homeowner</footer>
+                </blockquote>
+            </article>
+        </section>
+
+    </main>
+</body>
 </html>
