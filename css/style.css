@@ -1,0 +1,57 @@
+:root {
+  /* Base Background & Text */
+  --bg: rgb(43, 43, 43);
+  --text: rgb(230, 230, 230);
+
+  /* Primary Branding */
+  --primary: rgb(75, 108, 129);
+  --primary-hover: rgb(60, 85, 100);
+
+  /* Accent / Secondary Buttons */
+  --accent: rgb(132, 169, 140);
+  --accent-hover: rgb(110, 145, 120);
+
+  /* CTA / Highlight */
+  --highlight: rgb(220, 183, 104);
+  --highlight-text: rgb(30, 30, 30);
+
+  /* Alerts */
+  --danger: rgb(177, 70, 70);
+  --danger-hover: rgb(140, 40, 40);
+
+  /* UI */
+  --radius: 5px;
+  --padding: 10px 20px;
+}
+
+#app {
+    background-color: var(--bg);
+
+    color: var(--text);
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nav > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.navItem {
+    margin: 0 3dvw
+}
+
+a {
+    all: unset;
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
