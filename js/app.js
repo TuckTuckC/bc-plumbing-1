@@ -30,3 +30,12 @@ window.addEventListener("hashchange", () => {
 // Initial load
 loadPage(location.hash.replace("#", "") || "home");
 
+
+// Slow Scrolling Function
+function modScroll() {
+    var s = document.getElementById("b-roll");
+  s.style.top = s.style.top - 10 }
+
+window.addEventListener("scroll", function(){
+    modScroll(); 
+});

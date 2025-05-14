@@ -22,19 +22,36 @@
   /* UI */
   --radius: 5px;
   --padding: 10px 20px;
+
+  /* Distance Variables */
+  --nav-bar-height: 8dvh;
+  --video-height: 70dvh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 #app {
     background-color: var(--bg);
-
     color: var(--text);
 }
 
+#page {
+    padding: var(--nav-bar-height) 0 0 0;
+}
+
 #nav {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: var(--nav-bar-height);
+    width: 100dvw;
+    background-color: rgba(43, 43, 43, 0.6);
+    z-index: 2;
 }
 
 #nav > ul {
@@ -44,6 +61,17 @@
 
 .navItem {
     margin: 0 3dvw
+}
+
+#b-roll {
+    top: var(--nav-bar-height);
+    position: fixed;
+    height: var(--video-height);
+    z-index: -1;
+}
+
+#video-spacer {
+    height: var(--video-height);
 }
 
 a {
