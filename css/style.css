@@ -1,6 +1,7 @@
 :root {
   /* Base Background & Text */
   --bg: rgb(43, 43, 43);
+  --bg-light: rgb(70, 70, 70);
   --text: rgb(230, 230, 230);
 
   /* Primary Branding */
@@ -18,10 +19,6 @@
   /* Alerts */
   --danger: rgb(177, 70, 70);
   --danger-hover: rgb(140, 40, 40);
-
-  /* UI */
-  --radius: 5px;
-  --padding: 10px 20px;
 
   /* Distance Variables */
   --nav-bar-height: 8dvh;
@@ -42,16 +39,33 @@ body {
     padding: var(--nav-bar-height) 0 0 0;
 }
 
-#nav {
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary);
+    color: var(--text);
+    font-size: large;
+}
+
+.nav-container {
     position: fixed;
+    z-index: 2;
+    background-color: rgba(43, 43, 43, 0.7);
+    backdrop-filter: blur(0.2rem);
+}
+
+#nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     height: var(--nav-bar-height);
     width: 100dvw;
-    background-color: rgba(43, 43, 43, 0.6);
-    z-index: 2;
 }
 
 #nav > ul {
@@ -63,16 +77,47 @@ body {
     margin: 0 3dvw
 }
 
-#b-roll {
-    top: var(--nav-bar-height);
-    position: fixed;
-    height: var(--video-height);
-    z-index: -1;
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#video-spacer {
-    height: var(--video-height);
+#b-roll {
+    position: fixed;
+    min-height: var(--video-height);
+    z-index: -1;
+    width: 100dvw;
+    top: -8dvh;
 }
+
+
+#video-spacer {
+    min-height: var(--video-height);
+    display: flex;
+    align-items: space-evenly;
+    justify-content: start;
+    font-size: 5rem;
+}
+
+.headline {
+    height: 100%;
+    width: 50dvw;
+    padding: 1rem;
+}
+
+.headline > h3 {
+    font-size: 2rem;
+}
+
+.call-btn {
+    width: 7dvw;
+    height: 4dvw;
+    position: absolute;
+    align-self: flex-end;
+    justify-self: start;
+}
+
 
 a {
     all: unset;
@@ -80,6 +125,56 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 li {
     list-style-type: none;
+}
+
+.home-section {
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.what-we-do {
+    height: 70dvh;
+    max-width: 100dvw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.what-we-do-list-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 80dvw;
+}
+
+.what-we-do-list {
+    height: 100%;
+    display: flex;
+   justify-content: space-evenly;
+   align-content: space-around;
+   flex-wrap: wrap;
+}
+
+.what-we-do-list-item {
+    width: 35dvw;
+}
+
+.what-we-do-img {
+    border-radius: 1rem;
+}
+    
+.section-dark {
+    background-color: var(--bg);
+}
+
+.section-light {
+    background-color: var(--bg-light);
 }
